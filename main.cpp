@@ -72,9 +72,9 @@ void variableDeclarations() {
 	int myAge = 2;
 	int numberOfParticipants = 0;
 	int numberOfPlayers = 10;
-	double shoeSize = 6.50;
-	double fuelPrice = 2.12;
-	double heightRoom = 3.13;
+    double shoeSize = 6.5;
+	double fuelPrice = 2.1;
+	double heightRoom = 3.1;
 	bool lightIsOn = false;
 	bool coffeeIsPrepared = true;
 	bool waterIsBoiled = true;
@@ -85,13 +85,18 @@ void variableDeclarations() {
 	unsigned int daysLeftToHolidays = 32;
 	unsigned int numberOfPetsAtHome = 3;
 
-	ignoreUnused(
-		number && myAge && numberOfParticipants && numberOfPlayers &&
-		numberOfHousesInTown && daysLeftToHolidays && numberOfPetsAtHome &&
-		shoeSize && fuelPrice && heightRoom && lightIsOn && coffeeIsPrepared &&
-		waterIsBoiled && timeToLaunchRocket && hairThickness &&
-		statueHeight); // passing each variable declared to the ignoreUnused()
-					   // function
+	ignoreUnused(number && myAge && numberOfParticipants && numberOfPlayers);
+    ignoreUnused(shoeSize);
+    ignoreUnused(fuelPrice);
+    ignoreUnused(heightRoom);
+    ignoreUnused(numberOfHousesInTown && daysLeftToHolidays && numberOfPetsAtHome);
+    ignoreUnused(lightIsOn && coffeeIsPrepared && waterIsBoiled);
+    ignoreUnused(timeToLaunchRocket);
+    ignoreUnused(hairThickness);
+    ignoreUnused(statueHeight);
+    // passing each variable declared to the ignoreUnused()
+    
+// function
 }
 
 /*
@@ -202,8 +207,10 @@ int main() {
 	auto decisionAboutGoingOut = shouldIGoOut(20, false);
 
 	ignoreUnused(
-		carRented && anotherPlant && daysToFreeDay && tripCost &&
-		workingHours && distanceOfRun && decisionAboutGoingOut);
+		carRented && anotherPlant && daysToFreeDay && 
+		workingHours && decisionAboutGoingOut);
+    ignoreUnused(distanceOfRun);
+    ignoreUnused(tripCost);
 	std::cout << "good to go!" << std::endl;
 	return 0;
 }
