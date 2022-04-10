@@ -64,11 +64,11 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
  */
 
 // 2)
-void variableDeclarations() {
+void variableDeclarations() 
+{
 	// example:
-	int number =
-		2; // declaration of a variable named "number", that uses the primitive
-		   // type 'int', and the variable's initial value is '2'
+	int number = 2; // declaration of a variable named "number", that uses the primitive
+		            // type 'int', and the variable's initial value is '2'
 	int myAge = 2;
 	int numberOfParticipants = 0;
 	int numberOfPlayers = 10;
@@ -85,15 +85,7 @@ void variableDeclarations() {
 	unsigned int daysLeftToHolidays = 32;
 	unsigned int numberOfPetsAtHome = 3;
 
-	ignoreUnused(number && myAge && numberOfParticipants && numberOfPlayers);
-    ignoreUnused(shoeSize);
-    ignoreUnused(fuelPrice);
-    ignoreUnused(heightRoom);
-    ignoreUnused(numberOfHousesInTown && daysLeftToHolidays && numberOfPetsAtHome);
-    ignoreUnused(lightIsOn && coffeeIsPrepared && waterIsBoiled);
-    ignoreUnused(timeToLaunchRocket);
-    ignoreUnused(hairThickness);
-    ignoreUnused(statueHeight);
+	ignoreUnused(number, myAge, numberOfParticipants, numberOfPlayers, shoeSize, fuelPrice, heightRoom, lightIsOn, coffeeIsPrepared, waterIsBoiled, timeToLaunchRocket, hairThickness, statueHeight, numberOfHousesInTown, daysLeftToHolidays, numberOfPetsAtHome);
     // passing each variable declared to the ignoreUnused()
     
 // function
@@ -104,8 +96,7 @@ void variableDeclarations() {
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(
-	int rentalDuration,
+bool rentACar(	int rentalDuration,
 	int carType = 0) // function declaration with random number of arguments,
 					 // arbitrary number of arguments have default value
 {
@@ -115,51 +106,58 @@ bool rentACar(
 			   // 'return {};' at the end of it.
 }
 
-bool buyAnotherPlant(int spaceForPlantsAtHome, int numberOfPlantsAtHome) {
+bool buyAnotherPlant(int spaceForPlantsAtHome, int numberOfPlantsAtHome) 
+{
 	ignoreUnused(spaceForPlantsAtHome, numberOfPlantsAtHome);
 	return {};
 }
 
-int daysLeftToSaturday(int numberOfTheDayInTheWeek) {
+int daysLeftToSaturday(int numberOfTheDayInTheWeek) 
+{
 	ignoreUnused(numberOfTheDayInTheWeek);
 	return {};
 }
 
-double howMuchTripCosted(
-	double tripDistance,
-	double fuelEffeciency,
-	double fuelPrice) {
+double howMuchTripCosted(double tripDistance, double fuelEffeciency, double fuelPrice) 
+{
 	ignoreUnused(tripDistance, fuelEffeciency, fuelPrice);
 	return {};
 }
 
-void playSinewave(int freqOfSinewave) {
+void playSinewave(int freqOfSinewave) 
+{
 	ignoreUnused(freqOfSinewave);
 }
 
-void changeVolumeLevel(int volumeLevel) {
+void changeVolumeLevel(int volumeLevel) 
+{
 	ignoreUnused(volumeLevel);
 }
 
-void buyFruits(int numberOfApples, int numberOfOranges) {
+void buyFruits(int numberOfApples, int numberOfOranges) 
+{
 	ignoreUnused(numberOfApples, numberOfOranges);
 }
 
-int numberOfHoursWorked(int startingHourOfWork, int endingHourOfWork) {
+int numberOfHoursWorked(int startingHourOfWork, int endingHourOfWork) 
+{
 	ignoreUnused(startingHourOfWork, endingHourOfWork);
 	return {};
 }
 
-float runningDistance(float speedOfRun, float timeOfRun) {
+float runningDistance(float speedOfRun, float timeOfRun) 
+{
 	ignoreUnused(speedOfRun, timeOfRun);
 	return {};
 }
 
-void setTheOven(int ovenTemperature, int bakingTime) {
+void setTheOven(int ovenTemperature, int bakingTime) 
+{
 	ignoreUnused(ovenTemperature, bakingTime);
 }
 
-bool shouldIGoOut(int temperatureOutside, bool isItRaining) {
+bool shouldIGoOut(int temperatureOutside, bool isItRaining) 
+{
 	ignoreUnused(temperatureOutside, isItRaining);
 	return {};
 }
@@ -180,11 +178,11 @@ bool shouldIGoOut(int temperatureOutside, bool isItRaining) {
  Wait for my code review.
  */
 
-int main() {
+int main() 
+{
 	// example of calling that function, storing the value, and passing it to
 	// ignoreUnused at the end of main()
 	auto carRented = rentACar(6, 2);
-
 	// 1)
 	auto anotherPlant = buyAnotherPlant(4, 2);
 	// 2)
@@ -206,11 +204,7 @@ int main() {
 	// 10)
 	auto decisionAboutGoingOut = shouldIGoOut(20, false);
 
-	ignoreUnused(
-		carRented && anotherPlant && daysToFreeDay && 
-		workingHours && decisionAboutGoingOut);
-    ignoreUnused(distanceOfRun);
-    ignoreUnused(tripCost);
+	ignoreUnused(carRented, anotherPlant, daysToFreeDay, tripCost, workingHours, distanceOfRun, decisionAboutGoingOut);
 	std::cout << "good to go!" << std::endl;
 	return 0;
 }
