@@ -10,7 +10,8 @@ video: Chapter 2 - Part 3
  Create a branch named Part1
 
 Purpose:  This project will teach you how to declare variables and free functions. 
-This will be the first project where the code you write will be compiled and you will be responsible for making sure it compiles before submitting it for review.
+This will be the first project where the code you write will be compiled and you will be responsible for making sure it compiles before submitting it for review.
+
  1) Write down the names of the 6 major primitive types available in C++  here:
  int
  float
