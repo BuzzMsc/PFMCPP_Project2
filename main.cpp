@@ -1,6 +1,7 @@
 #include <iostream>
 
-template <typename... T> void ignoreUnused(T &&...) {}
+template <typename... T> 
+void ignoreUnused(T &&...) { }
 
 /*
 Project 2 - Part 1 / 1
@@ -52,24 +53,24 @@ variableDeclaration() function on line 59.
 void variableDeclarations() 
 {
 	// example:
-	int number = 2; // declaration of a variable named "number", that uses the type 'int', and the variable's initial value is '2'
-	int myAge = 2;
-	int numberOfParticipants = 0;
-	int numberOfPlayers = 10;
-	double shoeSize = 6.5;
-	double fuelPrice = 2.1;
-	double heightRoom = 3.1;
-	bool lightIsOn = false;
-	bool coffeeIsPrepared = true;
-	bool waterIsBoiled = true;
-	float timeToLaunchRocket = 42.2f;
-	float hairThickness = 1.5f;
-	float statueHeight = 10005.32f;
-	unsigned int numberOfHousesInTown = 452;
-	unsigned int daysLeftToHolidays = 32;
-	unsigned int numberOfPetsAtHome = 3;
-
-	ignoreUnused(number, myAge,numberOfParticipants, numberOfPlayers, shoeSize, fuelPrice, heightRoom, lightIsOn, coffeeIsPrepared, waterIsBoiled, timeToLaunchRocket, hairThickness, statueHeight, numberOfHousesInTown, daysLeftToHolidays, numberOfPetsAtHome);
+    int number = 2; // declaration of a variable named "number", that uses the type 'int', and the variable's initial value is '2'
+    int myAge = 2;
+    int numberOfParticipants = 0;
+    int numberOfPlayers = 10;
+    double shoeSize = 6.5;
+    double fuelPrice = 2.1;
+    double heightRoom = 3.1;
+    bool lightIsOn = false;
+    bool coffeeIsPrepared = true;
+    bool waterIsBoiled = true;
+    float timeToLaunchRocket = 42.2f;
+    float hairThickness = 1.5f;
+    float statueHeight = 10005.32f;
+    unsigned int numberOfHousesInTown = 452;
+    unsigned int daysLeftToHolidays = 32;
+    unsigned int numberOfPetsAtHome = 3;
+    
+    ignoreUnused(number, myAge,numberOfParticipants, numberOfPlayers, shoeSize, fuelPrice, heightRoom, lightIsOn, coffeeIsPrepared, waterIsBoiled, timeToLaunchRocket, hairThickness, statueHeight, numberOfHousesInTown, daysLeftToHolidays, numberOfPetsAtHome);
         
 	// passing each variable dec to the ignoreUnused()
 
@@ -83,65 +84,65 @@ void variableDeclarations()
  */
 bool rentACar(int rentalDuration, int carType = 0) // function declaration wi number of arguments,  arbitrary number of arguments have default value
 {
-	ignoreUnused(rentalDuration, carType); // pass  parameter to the ignoreUnused() function
-	return {}; // if your function returns  other than void, add
-			   // 'return {};' at the end of it.
+    ignoreUnused(rentalDuration, carType); // pass  parameter to the ignoreUnused() function
+    return {}; // if your function returns  other than void, add
+               // 'return {};' at the end of it.
 }
 
 bool buyAnotherPlant(int spaceForPlantsAtHome, int numberOfPlantsAtHome) 
 {
-	ignoreUnused(spaceForPlantsAtHome, numberOfPlantsAtHome);
-	return {};
+    ignoreUnused(spaceForPlantsAtHome, numberOfPlantsAtHome);
+    return {};
 }
 
 int daysLeftToSaturday(int numberOfTheDayInTheWeek) 
 {
-	ignoreUnused(numberOfTheDayInTheWeek);
-	return {};
+    ignoreUnused(numberOfTheDayInTheWeek);
+    return {};
 }
 
 double howMuchTripCosted(double tripDistance, double fuelEffeciency, double fuelPrice)
 {
-	ignoreUnused(tripDistance, fuelEffeciency, fuelPrice);
-	return {};
+    ignoreUnused(tripDistance, fuelEffeciency, fuelPrice);
+    return {};
 }
 
 void playSinewave(int freqOfSinewave)
 {
-	ignoreUnused(freqOfSinewave);
+    ignoreUnused(freqOfSinewave);
 }
 
 void changeVolumeLevel(int volumeLevel)
 {
-	ignoreUnused(volumeLevel);
+    ignoreUnused(volumeLevel);
 }
 
 void buyFruits(int numberOfApples, int numberOfOranges)
 {
-	ignoreUnused(numberOfApples, numberOfOranges);
+    ignoreUnused(numberOfApples, numberOfOranges);
 }
 
 int numberOfHoursWorked(int startingHourOfWork, int endingHourOfWork)
 {
-	ignoreUnused(startingHourOfWork, endingHourOfWork);
-	return {};
+    ignoreUnused(startingHourOfWork, endingHourOfWork);
+    return {};
 }
 
 float runningDistance(float speedOfRun, float timeOfRun)
 {
-	ignoreUnused(speedOfRun, timeOfRun);
-	return {};
+    ignoreUnused(speedOfRun, timeOfRun);
+    return {};
 }
 
 void setTheOven(int ovenTemperature, int bakingTime)
 {
-	ignoreUnused(ovenTemperature, bakingTime);
+    ignoreUnused(ovenTemperature, bakingTime);
 }
 
 bool shouldIGoOut(int temperatureOutside, bool isItRaining)
 {
-	ignoreUnused(temperatureOutside, isItRaining);
-	return {};
+    ignoreUnused(temperatureOutside, isItRaining);
+    return {};
 }
 
 /*
@@ -161,29 +162,29 @@ bool shouldIGoOut(int temperatureOutside, bool isItRaining)
 int main() 
 {
 	// example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-	auto carRented = rentACar(6, 2);
-	// 1)
-	auto anotherPlant = buyAnotherPlant(4, 2);
-	// 2)
-	auto daysToFreeDay = daysLeftToSaturday(3);
-	// 3)
-	auto tripCost = howMuchTripCosted(200.3, 4.2, 2.5);
-	// 4)
-	playSinewave(440);
-	// 5)
-	changeVolumeLevel(5);
-	// 6)
-	buyFruits(2, 50);
-	// 7)
-	auto workingHours = numberOfHoursWorked(8, 20);
-	// 8)
-	auto distanceOfRun = runningDistance(2.5f, 350.2f);
-	// 9)
-	setTheOven(180, 600);
-	// 10)
-	auto decisionAboutGoingOut = shouldIGoOut(20, false);
+    auto carRented = rentACar(6, 2);
+    // 1)
+    auto anotherPlant = buyAnotherPlant(4, 2);
+    // 2)
+    auto daysToFreeDay = daysLeftToSaturday(3);
+    // 3)
+    auto tripCost = howMuchTripCosted(200.3, 4.2, 2.5);
+    // 4)
+    playSinewave(440);
+    // 5)
+    changeVolumeLevel(5);
+    // 6)
+    buyFruits(2, 50);
+    // 7)
+    auto workingHours = numberOfHoursWorked(8, 20);
+    // 8)
+    auto distanceOfRun = runningDistance(2.5f, 350.2f);
+    // 9)
+    setTheOven(180, 600);
+    // 10)
+    auto decisionAboutGoingOut = shouldIGoOut(20, false);
     
     ignoreUnused(carRented, anotherPlant, daysToFreeDay, tripCost, workingHours, distanceOfRun, decisionAboutGoingOut);
-	std::cout << "good to go!" << std::endl;
-	return 0;
+    std::cout << "good to go!" << std::endl;
+    return 0;
 }
