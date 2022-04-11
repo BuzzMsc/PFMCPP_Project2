@@ -25,7 +25,8 @@ variableDeclaration() function on line 59.
     a) give each variable declarati  aninitial value
 		- just ignore wchar_t. you do not need to declare 3 variables of type'wchar_t'
 		- 'void' is a return type. you do not need to declare 3 variabl  of type 'void'. 
-    b) at the end of the function, call ignoreUnused once and pas all of your variables to it. see line 71 for an exam
+    b) at the end of the function, call ignoreUnused once and pas all of your variables to it. see line 71 for an exam
+
 3) Declare 10 free functions
 	each declaration should have a random number of parameters in the function parameter list. When naming your parameters, choose names that are releva  to the task implied by the function's name.
 
@@ -96,7 +97,8 @@ bool buyAnotherPlant(int spaceForPlantsAtHome, int numberOfPlantsAtHome)
 int daysLeftToSaturday(int numberOfTheDayInTheWeek) 
 {
 	ignoreUnused(numberOfTheDayInTheWeek);
-	return {};}
+	return {};
+}
 
 double howMuchTripCosted(double tripDistance, double fuelEffeciency, double fuelPrice)
 {
