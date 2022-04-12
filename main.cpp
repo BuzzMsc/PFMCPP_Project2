@@ -95,13 +95,13 @@ bool buyAnotherPlant(int spaceForPlantsAtHome, int numberOfPlantsAtHome)
     return {};
 }
 
-int daysLeftToSaturday(int numberOfTheDayInTheWeek) 
+int countDaysLeftToSaturday(int numberOfTheDayInTheWeek) 
 {
     ignoreUnused(numberOfTheDayInTheWeek);
     return {};
 }
 
-double howMuchTripCosted(double tripDistance, double fuelEffeciency, double fuelPrice)
+double countTripCosts(double tripDistance, double fuelEffeciency, double fuelPrice)
 {
     ignoreUnused(tripDistance, fuelEffeciency, fuelPrice);
     return {};
@@ -122,13 +122,13 @@ void buyFruits(int numberOfApples, int numberOfOranges)
     ignoreUnused(numberOfApples, numberOfOranges);
 }
 
-int numberOfHoursWorked(int startingHourOfWork, int endingHourOfWork)
+int countNumberOfWorkingHours(int startingHourOfWork, int endingHourOfWork)
 {
     ignoreUnused(startingHourOfWork, endingHourOfWork);
     return {};
 }
 
-float runningDistance(float speedOfRun, float timeOfRun)
+float countRunningDistance(float speedOfRun, float timeOfRun)
 {
     ignoreUnused(speedOfRun, timeOfRun);
     return {};
@@ -166,9 +166,9 @@ int main()
     // 1)
     auto anotherPlant = buyAnotherPlant(4, 2);
     // 2)
-    auto daysToFreeDay = daysLeftToSaturday(3);
+    auto daysToFreeDay = countDaysLeftToSaturday(3);
     // 3)
-    auto tripCost = howMuchTripCosted(200.3, 4.2, 2.5);
+    auto tripCost = countTripCosts(200.3, 4.2, 2.5);
     // 4)
     playSinewave(440);
     // 5)
@@ -176,9 +176,9 @@ int main()
     // 6)
     buyFruits(2, 50);
     // 7)
-    auto workingHours = numberOfHoursWorked(8, 20);
+    auto workingHours = countNumberOfWorkingHours(8, 20);
     // 8)
-    auto distanceOfRun = runningDistance(2.5f, 350.2f);
+    auto distanceOfRun = countRunningDistance(2.5f, 350.2f);
     // 9)
     setTheOven(180, 600);
     // 10)
